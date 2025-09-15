@@ -3,8 +3,8 @@ from aiogram.utils import executor
 
 import os
 
-TOKEN = os.getenv("BOT_TOKEN")  # токен берём из переменных окружения
-ADMIN_ID = int(os.getenv("ADMIN_ID"))  # твой телеграм ID
+TOKEN = os.getenv("8140610350:AAGdgBH0tSe4Wb_7VBb8f_y6vcfVu6jeT_s")  # токен берём из переменных окружения
+ADMIN_ID = int(os.getenv("@MakarGart"))  # твой телеграм ID
 
 bot = Bot(token=TOKEN)
 dp = Dispatcher(bot)
@@ -21,3 +21,4 @@ async def handle_text(message: types.Message):
 
 if __name__ == "__main__":
     executor.start_polling(dp, skip_updates=True)
+
