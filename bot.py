@@ -1,7 +1,13 @@
-from aiogram import Bot, Dispatcher, types
-from aiogram.utils import executor
+import asyncio
+import logging
+import sys
+from os import getenv
 
-import os
+from aiogram import Bot, Dispatcher, html
+from aiogram.client.default import DefaultBotProperties
+from aiogram.enums import ParseMode
+from aiogram.filters import CommandStart
+from aiogram.types import Message
 
 TOKEN = os.getenv("8140610350:AAGdgBH0tSe4Wb_7VBb8f_y6vcfVu6jeT_s")  # токен берём из переменных окружения
 ADMIN_ID = int(os.getenv("@MakarGart"))  # твой телеграм ID
@@ -21,4 +27,5 @@ async def handle_text(message: types.Message):
 
 if __name__ == "__main__":
     executor.start_polling(dp, skip_updates=True)
+
 
